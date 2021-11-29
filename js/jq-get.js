@@ -9,7 +9,9 @@ $("#clickcheck").blur(function() {
   var requestData = "message=" + $("#mesg").val();
 
   $.get(remoteaddr, requestData)
-    .done(function() {})
+    .done(function(data) {
+      console.log(data);
+    })
     .fail(function() {
       alert("get request failed"); //data will still be saved
     });
